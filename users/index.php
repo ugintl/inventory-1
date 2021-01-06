@@ -29,59 +29,57 @@ if ($session->isUserLoggedIn()) { redirect('../users/home.php', false);}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="animate__animated animate__backInDown" >
-<div class="login-page">
-    <div class="text-center">
-       <h1 class="animate__animated animate__flip animate__delay-2s" > Welcome</h1>
-       <p>Sign in to start your session</p>
-     </div>
-     <?php echo display_msg($msg); ?>
+<!--updated -->
 
-      <form method="post" action="../users/auth.php" class="clearfix">
-        <div class="form-group">
-
-              <label for="username" class="control-label">Username</label>
-              <input type="name" class="form-control animate__animated animate__lightSpeedInLeft animate__delay-3s" name="username" placeholder="Username">
-        </div>
-        <div class="form-group">
-            <label for="Password" class="control-label">Password</label>
-            <input type="password"  id="UserInput" name= "password" class="form-control animate__animated animate__lightSpeedInLeft animate__delay-3s " placeholder="Password">
-
-            <br>
-            <input type="checkbox" onclick="myFunction()"> Show Password
-            <!-- show password -->
-                                <script>
-                    function myFunction() {
-                      var x = document.getElementById("UserInput");
-                      if (x.type === "password") {
-                        x.type = "text";
-                      } else {
-                        x.type = "password";
-                      }
-                    }
-                    </script>
-
-        </div>
-
-
-
-        <div class="form-group">
-                <button type="submit" class="btn btn-info  pull-right">Login</button>
-        </div>
-    </form>
-    <div class="text-center">
-       <p></p>
-     </div>
-</div>
-
-</div>
-
-
-
-
+<form method="post" action="../users/auth.php" class="clearfix">
+  <div class="row animate__animated animate__backInDown" >
+      <div class="img container">
+          <img src="image/avatar.png" alt="Avatar" class="avatar">
+      </div>
+  
+          <div class = "row">
+             <h1> Welcome</h1>
+             <p>Sign in to start your session</p>
+           </div>        
+           <?php echo display_msg($msg); ?>
+  
+  
+            <div class="row">
+                    <label for="username" class="control-label">Username</label>
+                    <input type="name" class="form-control animate__animated animate__lightSpeedInLeft animate__delay-1s" name="username" placeholder="Username" required >
+            </div>
+  
+            <div class="row">
+                  <label for="Password" class="control-label">Password</label>
+                  <input type="password"  id="UserInput" name= "password" class="form-control animate__animated animate__lightSpeedInLeft animate__delay-2s " placeholder="Password" required>
+                  <br>
+                  <input type="checkbox" onclick="myFunction()"> Show Password
+                  <!-- show password -->
+                                      <script>
+                          function myFunction() {
+                            var x = document.getElementById("UserInput");
+                            if (x.type === "password") {
+                              x.type = "text";
+                            } else {
+                              x.type = "password";
+                            }
+                          }
+                          </script>
+             </div>
+  
+                <div class="row">
+                                <button type="submit" class="btn btn-info  pull-right">Login</button>
+                </div>
+    </div>
+  </form>
+  
 <?php include_once '../layouts/footer.php'; ?>
+
+
 </body>
 </html>
