@@ -33,8 +33,10 @@ If you find this project useful...
 [Donate](https://www.paypal.com/biz/fund?id=ZDR2NTBSKK7JE)
 ****
 
-Enhanced by Cory J. Potter aka CoreConduit Consulting Services 2018 - 2020
+# Enhanced by Cory J. Potter aka CoreConduit Consulting Services 2018 - 2020S
 
+# Core Contributor Juan Gimpaya
+youtube link:https://www.youtube.com/c/ClevergunsYT/featured
 The application was initially created by Siamon Hasan, using [php](http:php.net),
 [mysql](https://www.mysql.com) and [bootstrap](http://getbootstrap.com).
 ****
