@@ -11,11 +11,11 @@
 
 <?php
 ob_start();
-require_once '../includes/load.php';
+require_once 'includes/load.php';
 
-if ($session->isUserLoggedIn()) { redirect('../users/home.php', false);}
+if ($session->isUserLoggedIn()) { redirect('users/home.php', false);}
 ?>
-<?php include_once '../layouts/header.php'; ?>
+<?php include_once 'layouts/header.php'; ?>
 
 
 <!DOCTYPE html>
